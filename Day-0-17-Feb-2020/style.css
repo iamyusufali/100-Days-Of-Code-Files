@@ -1,0 +1,35 @@
+#results {
+  display: none;
+  border-top: solid 2px #bdb5e4;
+}
+
+body {
+  background-color: #0a091fcc;
+  color: white;
+  font-family: 'Fira Code';
+}
+
+.card {
+  background-color: #27272ccc;
+  box-shadow: 1px 1px 8px #bdb5e4;
+}
+
+.btn {
+  background-color: #16152ccc;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0a091fcc;
+  box-shadow: 1px 1px 4px #bdb5e4;
+}
+
+.input-group-prepend i {
+  background-color: #0a091fcc;
+  color: #bebdbd;
+  border-color: #0a091fcc;
+}
+
+.result-input {
+  border-right: 2px solid #0a091fcc;
+}
