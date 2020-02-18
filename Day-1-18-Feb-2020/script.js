@@ -5,7 +5,7 @@ const alertMsg = document.querySelector('.alert');
 const form = document.querySelector('form');
 const loanAmt = document.querySelector('#amount');
 const loanInterest = document.querySelector('#interest');
-const repaYears = document.querySelector('#years');
+const repaYears = document.querySelector('#years');g
 
 // Result Elements
 const result = document.querySelector('#results');
