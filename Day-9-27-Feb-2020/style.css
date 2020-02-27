@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap');
+
+/* Color: #f3d3f1 #302a2a #643f60*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #110311;
+  font-family: 'Poppins', sans-serif;
+  color: #f3d3f1;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: flex;
+  width: 85%;
+  height: 10vh;
+  margin: auto;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.logo-text,
+.nav-link,
+.intro h1 {
+  background: linear-gradient(to right, #e6b7e2, #5e535b);
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-box,
+.nav-links,
+.cart {
+  display: flex;
+}
+
+.logo-box {
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: #302a2a;
+  text-decoration: none;
+}
+
+nav {
+  flex: 2;
+}
+
+.nav-links {
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #720669;
+}
+
+.cart {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.cart img {
+  height: 40px;
+}
+
+.presentation {
+  width: 85%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  margin-bottom: 30px;
+}
+
+.intro h1 {
+  font-size: 75px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  animation: text-drop 1s ease-out;
+}
+
+.cta button {
+  outline: none;
+  cursor: pointer;
+  height: 55px;
+  width: 180px;
+  background-color: transparent;
+  color: #e6b7e2;
+  font-size: 18px;
+  border: 2px solid #e6b7e2;
+  border-radius: 3px;
+  animation: button-drop 1s ease-in-out;
+}
+
+.cta button:hover {
+  background-color: #e6b7e2;
+  color: #110311;
+}
+
+@keyframes text-drop {
+  0% {
+    opacity: 0;
+    transform: translateX(-220px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes button-drop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
