@@ -1,0 +1,18 @@
+#! /bin/bash
+
+# read -p "Enter Array: " ARRAY
+# read -p "Enter value: " VALUE
+
+ARRAY=( "Hydrogen" "Helium" "Lithium" "Beryllium" )
+
+
+for i in "${ARRAY[@]}";
+  do
+  echo "$i"
+done
+  
+# ## declare the array
+# declare -a my_array=( "Hydrogen" "Helium" "Lithium" "Beryllium" )
+
+# ## print element
+# echo ${my_array[3]}

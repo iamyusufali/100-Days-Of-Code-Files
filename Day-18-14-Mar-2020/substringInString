@@ -1,0 +1,10 @@
+#! /bin/bash
+
+read -p "Enter string: " STRING
+read -p "Enter substring: " SUBSTRING
+
+if [[ "$STRING" == *"$SUBSTRING"* ]]; then
+  echo "It's there"
+else
+  echo "It's not there"
+fi

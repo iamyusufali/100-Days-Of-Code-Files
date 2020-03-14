@@ -1,0 +1,74 @@
+#! /bin/bash
+
+
+# This script automates the version control process, As user can just run this script and avoid writing repetitive commands. 
+
+# Checks if repo is a git repo or not
+ISGITREPO=$(git rev-parse --is-inside-work-tree)
+
+# Executes process based on check
+if [ $ISGITREPO ] 
+then
+  git status
+  read -p "Add files to git? Y/N: " ANSWER
+else 
+  echo "Not a git repository!"
+  exit
+fi
+
+
+
+# Function to confirm push and then push files to github
+function gitPush() {
+  read -p "Push to github? Y/N: " PUSHANSWER
+  echo
+  git push
+  echo
+  echo "Changes pushed to your github."
+}
+
+
+# Function to confirm commit and then commit files to github
+function commit() {
+  echo
+  read -p "Enter commit msg: " MSG
+  
+  # If else statement
+  if [ "${MSG}" ] 
+  then
+    read -p "Continue? Y/N: " COMMITANSWER
+    echo
+    case "$COMMITANSWER" in
+      [yY] | [yY][eE][sS])
+        git commit -m "${MSG}"
+        gitPush
+        ;;
+      [nN] | [nN][oO])
+        exit
+    esac
+  else
+    echo "Please enter your commit message!"
+    commit
+  fi
+}
+
+
+# Check confirmation for git add and then add files to github
+case "$ANSWER" in
+  [yY] | [yY][eE][sS])
+    git add .
+    echo
+    echo "Files have been added"
+    commit
+    ;;
+  [nN] | [nN][oO])
+    echo "Exiting..."
+    exit
+    ;;
+  *)
+    echo "Please enter Y/Yes or N/No!"
+esac
+
+
+
+
